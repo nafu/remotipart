@@ -33,7 +33,7 @@ module Remotipart
       end
 
       initializer "remotipart.include_middelware" do
-        config.app_middleware.insert_after ActionDispatch::Request.parameter_parsers, Middleware
+        config.app_middleware.insert_after ActionDispatch::Request.params, Middleware
       end
     end
 
