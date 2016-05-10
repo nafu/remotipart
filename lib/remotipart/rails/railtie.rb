@@ -31,10 +31,6 @@ module Remotipart
         ActionController::Base.send :include, RequestHelper
         ActionController::Base.send :include, RenderOverrides
       end
-
-      initializer "remotipart.include_middelware" do
-        config.app_middleware.insert_after ActionDispatch::Http::Parameters, Middleware
-      end
     end
 
   end
